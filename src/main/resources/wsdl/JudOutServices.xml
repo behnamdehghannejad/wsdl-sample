@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="JudOutServices" targetNamespace="http://tempuri.org/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+                  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                  xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+                  xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                  xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+                  xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+                  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://tempuri.org/Imports">
+            <xsd:import schemaLocation="http://212.80.17.52/JudOutServices.svc?xsd=xsd0"
+                        namespace="http://tempuri.org/"/>
+            <xsd:import schemaLocation="http://212.80.17.52/JudOutServices.svc?xsd=xsd1"
+                        namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+            <xsd:import schemaLocation="http://212.80.17.52/JudOutServices.svc?xsd=xsd2"
+                        namespace="http://schemas.datacontract.org/2004/07/Rad.CMS"/>
+            <xsd:import schemaLocation="http://212.80.17.52/JudOutServices.svc?xsd=xsd3"
+                        namespace="http://schemas.datacontract.org/2004/07/System"/>
+            <xsd:import schemaLocation="http://212.80.17.52/JudOutServices.svc?xsd=xsd4"
+                        namespace="http://schemas.datacontract.org/2004/07/System.Reflection"/>
+            <xsd:import schemaLocation="http://212.80.17.52/JudOutServices.svc?xsd=xsd5"
+                        namespace="http://schemas.datacontract.org/2004/07/Organization"/>
+            <xsd:import schemaLocation="http://212.80.17.52/JudOutServices.svc?xsd=xsd6"
+                        namespace="http://schemas.datacontract.org/2004/07/Output"/>
+            <xsd:import schemaLocation="http://212.80.17.52/JudOutServices.svc?xsd=xsd7"
+                        namespace="http://schemas.datacontract.org/2004/07/Rad.CMS.Class4Serialize"/>
+            <xsd:import schemaLocation="http://212.80.17.52/JudOutServices.svc?xsd=xsd8"
+                        namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="IJudOutServices_IsAlive_InputMessage">
+        <wsdl:part name="parameters" element="tns:IsAlive"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_IsAlive_OutputMessage">
+        <wsdl:part name="parameters" element="tns:IsAliveResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPetitionData_InputMessage">
+        <wsdl:part name="parameters" element="tns:SetPetitionData"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPetitionData_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SetPetitionDataResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CheckPersonRegisterationForEnotify_InputMessage">
+        <wsdl:part name="parameters" element="tns:CheckPersonRegisterationForEnotify"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CheckPersonRegisterationForEnotify_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CheckPersonRegisterationForEnotifyResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InsertDocumentToENotice_InputMessage">
+        <wsdl:part name="parameters" element="tns:InsertDocumentToENotice"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InsertDocumentToENotice_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InsertDocumentToENoticeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CreateJSSUserWithSanaAuthority_InputMessage">
+        <wsdl:part name="parameters" element="tns:CreateJSSUserWithSanaAuthority"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CreateJSSUserWithSanaAuthority_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CreateJSSUserWithSanaAuthorityResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InActivateJSSUser_InputMessage">
+        <wsdl:part name="parameters" element="tns:InActivateJSSUser"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InActivateJSSUser_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InActivateJSSUserResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetENoticeViewHistoryForOut_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetENoticeViewHistoryForOut"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetENoticeViewHistoryForOut_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetENoticeViewHistoryForOutResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryCheckCaseHistory_InputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryCheckCaseHistory"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryCheckCaseHistory_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryCheckCaseHistoryResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetJSSClearanceCertRequestResult_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetJSSClearanceCertRequestResult"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetJSSClearanceCertRequestResult_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetJSSClearanceCertRequestResultResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryDefendentOrPenaltyCaseHistory_InputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryDefendentOrPenaltyCaseHistory"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryDefendentOrPenaltyCaseHistory_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryDefendentOrPenaltyCaseHistoryResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetHstJudgeTextByNo_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetHstJudgeTextByNo"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetHstJudgeTextByNo_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetHstJudgeTextByNoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryDocument_InputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryDocument"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryDocument_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryDocumentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryExperts_InputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryExperts"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryExperts_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryExpertsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryLawyers_InputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryLawyers"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryLawyers_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryLawyersResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetPersonPenalty_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetPersonPenalty"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetPersonPenalty_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetPersonPenaltyResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SearchIllicitPerson_InputMessage">
+        <wsdl:part name="parameters" element="tns:SearchIllicitPerson"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SearchIllicitPerson_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SearchIllicitPersonResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InsertIllicitPerson_InputMessage">
+        <wsdl:part name="parameters" element="tns:InsertIllicitPerson"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InsertIllicitPerson_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InsertIllicitPersonResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetCaseArrest_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetCaseArrest"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetCaseArrest_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetCaseArrestResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetCaseArrestIdentityNumber_InputMessage">
+        <wsdl:part name="parameters" element="tns:SetCaseArrestIdentityNumber"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetCaseArrestIdentityNumber_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SetCaseArrestIdentityNumberResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InsertAndUpdateOrganizationUnit_InputMessage">
+        <wsdl:part name="parameters" element="tns:InsertAndUpdateOrganizationUnit"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InsertAndUpdateOrganizationUnit_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InsertAndUpdateOrganizationUnitResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SendLetter_InputMessage">
+        <wsdl:part name="parameters" element="tns:SendLetter"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SendLetter_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SendLetterResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_ReceiveLetterFromOuterUnit_InputMessage">
+        <wsdl:part name="parameters" element="tns:ReceiveLetterFromOuterUnit"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_ReceiveLetterFromOuterUnit_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ReceiveLetterFromOuterUnitResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_ReceiveJsonLetterFromOuterUnit_InputMessage">
+        <wsdl:part name="parameters" element="tns:ReceiveJsonLetterFromOuterUnit"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_ReceiveJsonLetterFromOuterUnit_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ReceiveJsonLetterFromOuterUnitResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_UpdateLetterFromOuterUnitToReadState_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateLetterFromOuterUnitToReadState"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_UpdateLetterFromOuterUnitToReadState_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateLetterFromOuterUnitToReadStateResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CreateLetter_InputMessage">
+        <wsdl:part name="parameters" element="tns:CreateLetter"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CreateLetter_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CreateLetterResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_Create_InputMessage">
+        <wsdl:part name="parameters" element="tns:Create"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_Create_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CreateResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_Update_InputMessage">
+        <wsdl:part name="parameters" element="tns:Update"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_Update_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPersonRegistrationDataForNaja_InputMessage">
+        <wsdl:part name="parameters" element="tns:SetPersonRegistrationDataForNaja"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPersonRegistrationDataForNaja_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SetPersonRegistrationDataForNajaResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetPersonSabtAhvalImage_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetPersonSabtAhvalImage"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetPersonSabtAhvalImage_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetPersonSabtAhvalImageResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CheckPersonTokenForAbsenceAuthenticate_InputMessage">
+        <wsdl:part name="parameters" element="tns:CheckPersonTokenForAbsenceAuthenticate"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CheckPersonTokenForAbsenceAuthenticate_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CheckPersonTokenForAbsenceAuthenticateResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CreateAbsenceAuthenticateTempToken_InputMessage">
+        <wsdl:part name="parameters" element="tns:CreateAbsenceAuthenticateTempToken"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CreateAbsenceAuthenticateTempToken_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CreateAbsenceAuthenticateTempTokenResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SendOtpPasswordForPerson_InputMessage">
+        <wsdl:part name="parameters" element="tns:SendOtpPasswordForPerson"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SendOtpPasswordForPerson_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SendOtpPasswordForPersonResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CheckPersonOtpLogin_InputMessage">
+        <wsdl:part name="parameters" element="tns:CheckPersonOtpLogin"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CheckPersonOtpLogin_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CheckPersonOtpLoginResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CheckPersonLogin_InputMessage">
+        <wsdl:part name="parameters" element="tns:CheckPersonLogin"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_CheckPersonLogin_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CheckPersonLoginResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetPersonMobileNumbers_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetPersonMobileNumbers"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetPersonMobileNumbers_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetPersonMobileNumbersResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPetitionDataForOuterUnit_InputMessage">
+        <wsdl:part name="parameters" element="tns:SetPetitionDataForOuterUnit"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPetitionDataForOuterUnit_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SetPetitionDataForOuterUnitResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetPersonRegistrationData_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetPersonRegistrationData"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetPersonRegistrationData_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetPersonRegistrationDataResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPetitionDocumentForOuterUnit_InputMessage">
+        <wsdl:part name="parameters" element="tns:SetPetitionDocumentForOuterUnit"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPetitionDocumentForOuterUnit_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SetPetitionDocumentForOuterUnitResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetBaseInfoData_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetBaseInfoData"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetBaseInfoData_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetBaseInfoDataResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPersonAbsenceAuthentication_InputMessage">
+        <wsdl:part name="parameters" element="tns:SetPersonAbsenceAuthentication"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPersonAbsenceAuthentication_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SetPersonAbsenceAuthenticationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPersonAbsenceAuthenticationPictureAndSignImage_InputMessage">
+        <wsdl:part name="parameters" element="tns:SetPersonAbsenceAuthenticationPictureAndSignImage"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SetPersonAbsenceAuthenticationPictureAndSignImage_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SetPersonAbsenceAuthenticationPictureAndSignImageResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryJSSLawyerContract_InputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryJSSLawyerContract"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_InquiryJSSLawyerContract_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InquiryJSSLawyerContractResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SendOrganizationUnit_InputMessage">
+        <wsdl:part name="parameters" element="tns:SendOrganizationUnit"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SendOrganizationUnit_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SendOrganizationUnitResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SendLetterSubject_InputMessage">
+        <wsdl:part name="parameters" element="tns:SendLetterSubject"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_SendLetterSubject_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SendLetterSubjectResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetSajaReportResult_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetSajaReportResult"/>
+    </wsdl:message>
+    <wsdl:message name="IJudOutServices_GetSajaReportResult_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetSajaReportResultResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="IJudOutServices">
+        <wsdl:operation name="IsAlive">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/IsAlive"
+                        message="tns:IJudOutServices_IsAlive_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/IsAliveResponse"
+                         message="tns:IJudOutServices_IsAlive_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SetPetitionData">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SetPetitionData"
+                        message="tns:IJudOutServices_SetPetitionData_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SetPetitionDataResponse"
+                         message="tns:IJudOutServices_SetPetitionData_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CheckPersonRegisterationForEnotify">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/CheckPersonRegisterationForEnotify"
+                        message="tns:IJudOutServices_CheckPersonRegisterationForEnotify_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/CheckPersonRegisterationForEnotifyResponse"
+                         message="tns:IJudOutServices_CheckPersonRegisterationForEnotify_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InsertDocumentToENotice">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/InsertDocumentToENotice"
+                        message="tns:IJudOutServices_InsertDocumentToENotice_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/InsertDocumentToENoticeResponse"
+                         message="tns:IJudOutServices_InsertDocumentToENotice_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CreateJSSUserWithSanaAuthority">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/CreateJSSUserWithSanaAuthority"
+                        message="tns:IJudOutServices_CreateJSSUserWithSanaAuthority_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/CreateJSSUserWithSanaAuthorityResponse"
+                         message="tns:IJudOutServices_CreateJSSUserWithSanaAuthority_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InActivateJSSUser">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/InActivateJSSUser"
+                        message="tns:IJudOutServices_InActivateJSSUser_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/InActivateJSSUserResponse"
+                         message="tns:IJudOutServices_InActivateJSSUser_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetENoticeViewHistoryForOut">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/GetENoticeViewHistoryForOut"
+                        message="tns:IJudOutServices_GetENoticeViewHistoryForOut_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/GetENoticeViewHistoryForOutResponse"
+                         message="tns:IJudOutServices_GetENoticeViewHistoryForOut_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryCheckCaseHistory">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/InquiryCheckCaseHistory"
+                        message="tns:IJudOutServices_InquiryCheckCaseHistory_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/InquiryCheckCaseHistoryResponse"
+                         message="tns:IJudOutServices_InquiryCheckCaseHistory_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetJSSClearanceCertRequestResult">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/GetJSSClearanceCertRequestResult"
+                        message="tns:IJudOutServices_GetJSSClearanceCertRequestResult_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/GetJSSClearanceCertRequestResultResponse"
+                         message="tns:IJudOutServices_GetJSSClearanceCertRequestResult_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryDefendentOrPenaltyCaseHistory">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/InquiryDefendentOrPenaltyCaseHistory"
+                        message="tns:IJudOutServices_InquiryDefendentOrPenaltyCaseHistory_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/InquiryDefendentOrPenaltyCaseHistoryResponse"
+                         message="tns:IJudOutServices_InquiryDefendentOrPenaltyCaseHistory_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetHstJudgeTextByNo">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/GetHstJudgeTextByNo"
+                        message="tns:IJudOutServices_GetHstJudgeTextByNo_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/GetHstJudgeTextByNoResponse"
+                         message="tns:IJudOutServices_GetHstJudgeTextByNo_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryDocument">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/InquiryDocument"
+                        message="tns:IJudOutServices_InquiryDocument_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/InquiryDocumentResponse"
+                         message="tns:IJudOutServices_InquiryDocument_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryExperts">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/InquiryExperts"
+                        message="tns:IJudOutServices_InquiryExperts_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/InquiryExpertsResponse"
+                         message="tns:IJudOutServices_InquiryExperts_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryLawyers">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/InquiryLawyers"
+                        message="tns:IJudOutServices_InquiryLawyers_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/InquiryLawyersResponse"
+                         message="tns:IJudOutServices_InquiryLawyers_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetPersonPenalty">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/GetPersonPenalty"
+                        message="tns:IJudOutServices_GetPersonPenalty_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/GetPersonPenaltyResponse"
+                         message="tns:IJudOutServices_GetPersonPenalty_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SearchIllicitPerson">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SearchIllicitPerson"
+                        message="tns:IJudOutServices_SearchIllicitPerson_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SearchIllicitPersonResponse"
+                         message="tns:IJudOutServices_SearchIllicitPerson_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InsertIllicitPerson">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/InsertIllicitPerson"
+                        message="tns:IJudOutServices_InsertIllicitPerson_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/InsertIllicitPersonResponse"
+                         message="tns:IJudOutServices_InsertIllicitPerson_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetCaseArrest">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/GetCaseArrest"
+                        message="tns:IJudOutServices_GetCaseArrest_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/GetCaseArrestResponse"
+                         message="tns:IJudOutServices_GetCaseArrest_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SetCaseArrestIdentityNumber">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SetCaseArrestIdentityNumber"
+                        message="tns:IJudOutServices_SetCaseArrestIdentityNumber_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SetCaseArrestIdentityNumberResponse"
+                         message="tns:IJudOutServices_SetCaseArrestIdentityNumber_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InsertAndUpdateOrganizationUnit">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/InsertAndUpdateOrganizationUnit"
+                        message="tns:IJudOutServices_InsertAndUpdateOrganizationUnit_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/InsertAndUpdateOrganizationUnitResponse"
+                         message="tns:IJudOutServices_InsertAndUpdateOrganizationUnit_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SendLetter">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SendLetter"
+                        message="tns:IJudOutServices_SendLetter_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SendLetterResponse"
+                         message="tns:IJudOutServices_SendLetter_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ReceiveLetterFromOuterUnit">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/ReceiveLetterFromOuterUnit"
+                        message="tns:IJudOutServices_ReceiveLetterFromOuterUnit_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/ReceiveLetterFromOuterUnitResponse"
+                         message="tns:IJudOutServices_ReceiveLetterFromOuterUnit_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ReceiveJsonLetterFromOuterUnit">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/ReceiveJsonLetterFromOuterUnit"
+                        message="tns:IJudOutServices_ReceiveJsonLetterFromOuterUnit_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/ReceiveJsonLetterFromOuterUnitResponse"
+                         message="tns:IJudOutServices_ReceiveJsonLetterFromOuterUnit_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateLetterFromOuterUnitToReadState">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/UpdateLetterFromOuterUnitToReadState"
+                        message="tns:IJudOutServices_UpdateLetterFromOuterUnitToReadState_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/UpdateLetterFromOuterUnitToReadStateResponse"
+                         message="tns:IJudOutServices_UpdateLetterFromOuterUnitToReadState_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CreateLetter">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/CreateLetter"
+                        message="tns:IJudOutServices_CreateLetter_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/CreateLetterResponse"
+                         message="tns:IJudOutServices_CreateLetter_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="Create">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/Create"
+                        message="tns:IJudOutServices_Create_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/CreateResponse"
+                         message="tns:IJudOutServices_Create_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="Update">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/Update"
+                        message="tns:IJudOutServices_Update_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/UpdateResponse"
+                         message="tns:IJudOutServices_Update_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SetPersonRegistrationDataForNaja">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SetPersonRegistrationDataForNaja"
+                        message="tns:IJudOutServices_SetPersonRegistrationDataForNaja_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SetPersonRegistrationDataForNajaResponse"
+                         message="tns:IJudOutServices_SetPersonRegistrationDataForNaja_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetPersonSabtAhvalImage">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/GetPersonSabtAhvalImage"
+                        message="tns:IJudOutServices_GetPersonSabtAhvalImage_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/GetPersonSabtAhvalImageResponse"
+                         message="tns:IJudOutServices_GetPersonSabtAhvalImage_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CheckPersonTokenForAbsenceAuthenticate">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/CheckPersonTokenForAbsenceAuthenticate"
+                        message="tns:IJudOutServices_CheckPersonTokenForAbsenceAuthenticate_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/CheckPersonTokenForAbsenceAuthenticateResponse"
+                         message="tns:IJudOutServices_CheckPersonTokenForAbsenceAuthenticate_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CreateAbsenceAuthenticateTempToken">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/CreateAbsenceAuthenticateTempToken"
+                        message="tns:IJudOutServices_CreateAbsenceAuthenticateTempToken_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/CreateAbsenceAuthenticateTempTokenResponse"
+                         message="tns:IJudOutServices_CreateAbsenceAuthenticateTempToken_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SendOtpPasswordForPerson">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SendOtpPasswordForPerson"
+                        message="tns:IJudOutServices_SendOtpPasswordForPerson_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SendOtpPasswordForPersonResponse"
+                         message="tns:IJudOutServices_SendOtpPasswordForPerson_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CheckPersonOtpLogin">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/CheckPersonOtpLogin"
+                        message="tns:IJudOutServices_CheckPersonOtpLogin_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/CheckPersonOtpLoginResponse"
+                         message="tns:IJudOutServices_CheckPersonOtpLogin_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CheckPersonLogin">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/CheckPersonLogin"
+                        message="tns:IJudOutServices_CheckPersonLogin_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/CheckPersonLoginResponse"
+                         message="tns:IJudOutServices_CheckPersonLogin_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetPersonMobileNumbers">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/GetPersonMobileNumbers"
+                        message="tns:IJudOutServices_GetPersonMobileNumbers_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/GetPersonMobileNumbersResponse"
+                         message="tns:IJudOutServices_GetPersonMobileNumbers_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SetPetitionDataForOuterUnit">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SetPetitionDataForOuterUnit"
+                        message="tns:IJudOutServices_SetPetitionDataForOuterUnit_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SetPetitionDataForOuterUnitResponse"
+                         message="tns:IJudOutServices_SetPetitionDataForOuterUnit_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetPersonRegistrationData">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/GetPersonRegistrationData"
+                        message="tns:IJudOutServices_GetPersonRegistrationData_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/GetPersonRegistrationDataResponse"
+                         message="tns:IJudOutServices_GetPersonRegistrationData_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SetPetitionDocumentForOuterUnit">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SetPetitionDocumentForOuterUnit"
+                        message="tns:IJudOutServices_SetPetitionDocumentForOuterUnit_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SetPetitionDocumentForOuterUnitResponse"
+                         message="tns:IJudOutServices_SetPetitionDocumentForOuterUnit_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetBaseInfoData">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/GetBaseInfoData"
+                        message="tns:IJudOutServices_GetBaseInfoData_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/GetBaseInfoDataResponse"
+                         message="tns:IJudOutServices_GetBaseInfoData_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SetPersonAbsenceAuthentication">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SetPersonAbsenceAuthentication"
+                        message="tns:IJudOutServices_SetPersonAbsenceAuthentication_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SetPersonAbsenceAuthenticationResponse"
+                         message="tns:IJudOutServices_SetPersonAbsenceAuthentication_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SetPersonAbsenceAuthenticationPictureAndSignImage">
+            <wsdl:input
+                    wsaw:Action="http://tempuri.org/IJudOutServices/SetPersonAbsenceAuthenticationPictureAndSignImage"
+                    message="tns:IJudOutServices_SetPersonAbsenceAuthenticationPictureAndSignImage_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="http://tempuri.org/IJudOutServices/SetPersonAbsenceAuthenticationPictureAndSignImageResponse"
+                    message="tns:IJudOutServices_SetPersonAbsenceAuthenticationPictureAndSignImage_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryJSSLawyerContract">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/InquiryJSSLawyerContract"
+                        message="tns:IJudOutServices_InquiryJSSLawyerContract_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/InquiryJSSLawyerContractResponse"
+                         message="tns:IJudOutServices_InquiryJSSLawyerContract_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SendOrganizationUnit">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SendOrganizationUnit"
+                        message="tns:IJudOutServices_SendOrganizationUnit_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SendOrganizationUnitResponse"
+                         message="tns:IJudOutServices_SendOrganizationUnit_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SendLetterSubject">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/SendLetterSubject"
+                        message="tns:IJudOutServices_SendLetterSubject_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/SendLetterSubjectResponse"
+                         message="tns:IJudOutServices_SendLetterSubject_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetSajaReportResult">
+            <wsdl:input wsaw:Action="http://tempuri.org/IJudOutServices/GetSajaReportResult"
+                        message="tns:IJudOutServices_GetSajaReportResult_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IJudOutServices/GetSajaReportResultResponse"
+                         message="tns:IJudOutServices_GetSajaReportResult_OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BasicHttpBinding_IJudOutServices" type="tns:IJudOutServices">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="IsAlive">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/IsAlive" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SetPetitionData">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SetPetitionData" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CheckPersonRegisterationForEnotify">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/CheckPersonRegisterationForEnotify"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InsertDocumentToENotice">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/InsertDocumentToENotice" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CreateJSSUserWithSanaAuthority">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/CreateJSSUserWithSanaAuthority"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InActivateJSSUser">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/InActivateJSSUser" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetENoticeViewHistoryForOut">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/GetENoticeViewHistoryForOut"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryCheckCaseHistory">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/InquiryCheckCaseHistory" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetJSSClearanceCertRequestResult">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/GetJSSClearanceCertRequestResult"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryDefendentOrPenaltyCaseHistory">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/InquiryDefendentOrPenaltyCaseHistory"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetHstJudgeTextByNo">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/GetHstJudgeTextByNo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryDocument">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/InquiryDocument" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryExperts">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/InquiryExperts" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryLawyers">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/InquiryLawyers" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetPersonPenalty">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/GetPersonPenalty" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SearchIllicitPerson">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SearchIllicitPerson" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InsertIllicitPerson">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/InsertIllicitPerson" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCaseArrest">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/GetCaseArrest" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SetCaseArrestIdentityNumber">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SetCaseArrestIdentityNumber"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InsertAndUpdateOrganizationUnit">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/InsertAndUpdateOrganizationUnit"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SendLetter">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SendLetter" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ReceiveLetterFromOuterUnit">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/ReceiveLetterFromOuterUnit"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ReceiveJsonLetterFromOuterUnit">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/ReceiveJsonLetterFromOuterUnit"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateLetterFromOuterUnitToReadState">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/UpdateLetterFromOuterUnitToReadState"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CreateLetter">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/CreateLetter" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Create">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/Create" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Update">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/Update" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SetPersonRegistrationDataForNaja">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SetPersonRegistrationDataForNaja"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetPersonSabtAhvalImage">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/GetPersonSabtAhvalImage" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CheckPersonTokenForAbsenceAuthenticate">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/CheckPersonTokenForAbsenceAuthenticate"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CreateAbsenceAuthenticateTempToken">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/CreateAbsenceAuthenticateTempToken"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SendOtpPasswordForPerson">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SendOtpPasswordForPerson" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CheckPersonOtpLogin">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/CheckPersonOtpLogin" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CheckPersonLogin">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/CheckPersonLogin" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetPersonMobileNumbers">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/GetPersonMobileNumbers" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SetPetitionDataForOuterUnit">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SetPetitionDataForOuterUnit"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetPersonRegistrationData">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/GetPersonRegistrationData" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SetPetitionDocumentForOuterUnit">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SetPetitionDocumentForOuterUnit"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetBaseInfoData">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/GetBaseInfoData" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SetPersonAbsenceAuthentication">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SetPersonAbsenceAuthentication"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SetPersonAbsenceAuthenticationPictureAndSignImage">
+            <soap:operation
+                    soapAction="http://tempuri.org/IJudOutServices/SetPersonAbsenceAuthenticationPictureAndSignImage"
+                    style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InquiryJSSLawyerContract">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/InquiryJSSLawyerContract" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SendOrganizationUnit">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SendOrganizationUnit" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SendLetterSubject">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/SendLetterSubject" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetSajaReportResult">
+            <soap:operation soapAction="http://tempuri.org/IJudOutServices/GetSajaReportResult" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="JudOutServices">
+        <wsdl:port name="BasicHttpBinding_IJudOutServices" binding="tns:BasicHttpBinding_IJudOutServices">
+            <soap:address location="http://212.80.17.52/JudOutServices.svc"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
